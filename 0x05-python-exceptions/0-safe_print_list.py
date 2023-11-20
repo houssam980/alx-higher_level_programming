@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             if idx < x:
                 print(my_list[idx], end="")
-                break
+                idx += 1
             else:
                 print()
                 return idx
