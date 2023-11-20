@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
 
-    idx = ints_to_print= 0
+    idx = ints_to_print = 0
     while True:
         try:
             if idx < x:
