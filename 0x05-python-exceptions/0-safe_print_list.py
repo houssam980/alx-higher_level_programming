@@ -1,14 +1,14 @@
-#!/usr/bin/pytho3
+#!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    idx = 0
+    ix = 0
     while True:
         try:
-            if idx < x:
-                print(my_list[idx], end="")
-                idx += 1
+            if ix < x:
+                print(my_list[ix], end='')
+                ix += 1
             else:
                 print()
-                return idx
+                return ix
         except IndexError:
             print()
-            return idx
+            return ix
