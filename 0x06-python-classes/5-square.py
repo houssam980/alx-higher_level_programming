@@ -25,19 +25,17 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     def area(self):
         """return the exact value of area by:
         size ** 2"""
         return self.__size ** 2
 
-
     def my_print(self):
         """print square ini sdtout with # char"""
-        if self.__size > 0 and self.__size < 0:
-            for iterate in range (self.__size):
+        if self.__size != 0:
+            for iterate in range(self.__size):
                 for iterate_2 in range(self.__size):
                     print("#", end="")
         else:
