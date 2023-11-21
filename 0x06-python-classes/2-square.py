@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Square Module based on 0-square.py task"""
 
 
@@ -14,7 +13,7 @@ class Square:
            TypeError : if size != 0
            ValueError : if size less than 0
         """
-        if size != int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
