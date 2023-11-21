@@ -13,7 +13,8 @@ class Square:
            ValueError : if size less than 0
         """
 	   self.__size = size
-        @property
+        
+	@property
         def size(self):
             """getting and setting"""
             return self.__size
@@ -24,7 +25,7 @@ class Square:
                 raise TypeError("size must be an integer")
             if size < 0:
                 raise ValueError("size must be >= 0")
-            self.__size = size
+            self.__size = value
 
     def area(self):
         """return the exact value of area by:
