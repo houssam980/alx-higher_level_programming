@@ -12,6 +12,7 @@ class Square:
            TypeError : if size != 0
            ValueError : if size less than 0
         """
+	   self.__size = size
         @property
         def size(self):
             """getting and setting"""
