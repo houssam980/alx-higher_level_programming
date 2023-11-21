@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Class Define A square"""
-
+"""Square Module to import"""
 class Square:
-"""Square definetion ."""
-	pass
+    """class That Defines a Square"""
+    pass
