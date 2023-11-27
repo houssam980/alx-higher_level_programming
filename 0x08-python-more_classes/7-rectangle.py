@@ -65,12 +65,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        rect = []
-        for i in range(self.__height):
-            [rect.append(str(self.sym_print)) for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return rect
+        recten = []
+        for iterate in range(self.__height):
+            [recten.append(str(self.sym_print)) for lp_2 in range(self.__width)]
+            if iterate != self.__height - 1:
+                recten.append("\n")
+        return recten
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
@@ -82,4 +82,4 @@ class Rectangle:
         """dropped Rectangle"""
         type(self).num_inst -= 1
         print("Bye rectangle...")
-        
+
