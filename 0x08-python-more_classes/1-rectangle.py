@@ -3,11 +3,6 @@
 """
 
 
-#!/usr/bin/python3
-"""Define Rectangle class
-"""
-
-
 class Rectangle:
     """Class Rectangle."""
 
@@ -39,7 +34,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        if value not in isinstance(int):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
