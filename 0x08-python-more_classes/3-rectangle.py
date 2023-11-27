@@ -19,7 +19,7 @@ class Rectangle:
         """Return printable string representation"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        rec_str = ""
+        recten_str = ""
         for iterate in range(self.__height):
             for lp_2 in range(self.__width):
                 recten_str += "#"
