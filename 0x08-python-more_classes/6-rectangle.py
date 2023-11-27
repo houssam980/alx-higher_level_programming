@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Rectangle class"""
+"""Defining my rectangle class"""
 
 
 class Rectangle:
     """Define Rectangle"""
 
-    num_inst = 0
-    sym_print = "#"
+    num_instan = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -15,16 +14,15 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        type(self).num_inst += 1
+        type(self).num_instan += 1
 
     @property
     def width(self):
-        """Getting property"""
+        """Get width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setting the width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -33,15 +31,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        return self.__height
-        """
+        """Height getting"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Height Setter
-        value :
+        """Height Setting
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -50,36 +45,34 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Area rectangle"""
+        """Area of Rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Perimeter Rectangle."""
+        """Perimeter of Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """representation
+        """String rep
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-
-        recten = []
+        rectn = []
         for iterate in range(self.__height):
-            [recten.append(str(self.sym_print)) for lp_2 in range(self.__width)]
+            [rectn.append('#') for lp_1 in range(self.__width)]
             if iterate != self.__height - 1:
-                recten.append("\n")
-        return recten
+                rectn.append("\n")
+        return "".join(rectn)
 
     def __repr__(self):
-        """Return the string representation of the Rectangle."""
-        recten = "Rectangle(" + str(self.__width)
-        recten += ", " + str(self.__height) + ")"
-        return recten
+        """Return string"""
+        rectn = "Rectangle(" + str(self.__width)
+        rectn += ", " + str(self.__height) + ")"
+        return rectn
 
     def __del__(self):
-        """dropped Rectangle"""
-        type(self).num_inst -= 1
+        """delete with bye msg"""
+        type(self).num_instan -= 1
         print("Bye rectangle...")
-
