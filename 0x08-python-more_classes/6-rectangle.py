@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# 6-rectangle.py
-# Brennan D Baraban <375@holbertonschool.com>
-"""Defines a Rectangle class."""
+"""Define Rectangle"""
 
 
 class Rectangle:
@@ -9,7 +7,7 @@ class Rectangle:
     Rectangle Class
     """
 
-    num_instan = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -17,7 +15,7 @@ class Rectangle:
         width : 0
         height : 0
         """
-        type(self).num_instan += 1
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -79,5 +77,5 @@ class Rectangle:
 
     def __del__(self):
         """Print Bye Rectangle"""
-        type(self).num_instan -= 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
