@@ -1,24 +1,29 @@
 #!/usr/bin/python3
-"""Defining my rectangle class"""
+# 6-rectangle.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """Define Rectangle"""
+    """
+    Rectangle Class
+    """
 
     num_instan = 0
 
     def __init__(self, width=0, height=0):
         """
+        Define Rectangle
         width : 0
         height : 0
         """
+        type(self).num_instan += 1
         self.width = width
         self.height = height
-        type(self).num_instan += 1
 
     @property
     def width(self):
-        """Get width"""
+        """getting width"""
         return self.__width
 
     @width.setter
@@ -31,13 +36,11 @@ class Rectangle:
 
     @property
     def height(self):
-        """Height getting"""
+        """getting height and setting it."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Height Setting
-        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -45,34 +48,36 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Area of Rectangle"""
+        """Return the area of the Rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Perimeter of Rectangle."""
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return (self.__width * 2) + (self.__height * 2)
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """String rep
+        """
+        Return printable representation
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rectn = []
+
+        rect = []
         for iterate in range(self.__height):
-            [rectn.append('#') for lp_1 in range(self.__width)]
+            [rect.append('#') for lp_1 in range(self.__width)]
             if iterate != self.__height - 1:
-                rectn.append("\n")
-        return "".join(rectn)
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Return string"""
-        rectn = "Rectangle(" + str(self.__width)
-        rectn += ", " + str(self.__height) + ")"
-        return rectn
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return rect
 
     def __del__(self):
-        """delete with bye msg"""
+        """Print Bye Rectangle"""
         type(self).num_instan -= 1
         print("Bye rectangle...")
