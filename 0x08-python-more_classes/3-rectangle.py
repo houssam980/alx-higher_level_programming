@@ -22,9 +22,9 @@ class Rectangle:
         rec_str = ""
         for iterate in range(self.__height):
             for lp_2 in range(self.__width):
-                rec_str += "#"
-            rec_str += "\n"
-        return rec_str[:-1]
+                recten_str += "#"
+            recten_str += "\n"
+        return recten_str[:-1]
 
     def __repr__(self):
         """Return string representation
