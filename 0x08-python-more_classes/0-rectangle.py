@@ -3,8 +3,8 @@
 Define Rectangle
 """
 
-class Rectangle:
 
+class Rectangle:
     """
     class Rectangle
     """
