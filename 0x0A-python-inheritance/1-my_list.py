@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""Define MyList Class"""
+'''define Mylist Class'''
 
 
 class MyList(list):
-    """child class"""
-    def __init__(self):
-        """invoke constractor from parents class"""
-        super().__init__(self)
+    """invoking from parent class"""
     def print_sorted(self):
-        """print list in sorted"""
+        """print sorted list"""
         print(sorted(self))
