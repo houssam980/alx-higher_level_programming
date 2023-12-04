@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''define Mylist Class'''
+"""define Mylist Class"""
 
 
 class MyList(list):
-    """invoking from parent class"""
+    """print sorted list"""
+
     def print_sorted(self):
-        """print sorted list"""
         print(sorted(self))
