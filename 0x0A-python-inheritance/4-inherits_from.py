@@ -9,9 +9,10 @@ def inherits_from(obj, a_class):
    params: 
     obj : object
     a_class : class
-    Return: 
+    Return: true if onject instance of 
+   a class otherwise False
    """
-   if isinstance(obj) == issubclass(a_class):
+   if isinstance(obj, a_class) and type(obj) != a_class:
       return True
    else:
       return False
