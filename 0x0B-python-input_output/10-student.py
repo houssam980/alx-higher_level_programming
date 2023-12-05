@@ -20,5 +20,5 @@ class Student:
         else:
             selector = {}
             for arrtub in attrs:
-                if isinstance(attrs, list, str):
+                if isinstance(attrs, list and str):
                     return selector[arrtub] == getattr(self, arrtub)
