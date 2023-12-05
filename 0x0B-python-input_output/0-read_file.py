@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""openining File using with"""
+"""Define file reading"""
 
 
 def read_file(filename=""):
+    """Print file's content to sdtout"""
     with open(filename, encoding="utf-8") as f:
-        """print file's stdout"""
         print(f.read(), end="")
