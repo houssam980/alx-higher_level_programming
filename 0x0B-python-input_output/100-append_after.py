@@ -10,11 +10,12 @@ def append_after(filename="", search_string="", new_string=""):
         search_string : string will search
         new_string: insert string
     """
+
     conte = ""
-    with open(filename) as rd:
-        for ln in rd:
+    with open(filename) as fr:
+        for ln in fr:
             conte += ln
-            if search_string == ln:
+            if search_string in ln:
                 conte += new_string
-    with open(filename, "w") as wrt:
-        wrt.write(conte)
+    with open(filename, "w") as fw:
+        fw.write(conte)
