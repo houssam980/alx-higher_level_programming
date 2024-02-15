@@ -16,8 +16,8 @@ if __name__ == '__main__':
     curs.execute("SELECT * FROM states")
 
     rows = cur.fetchall()
-    for i in rows:
-        print(i)
+    for iter in rw:
+        print(iter)
         """close excution and db connection"""
     curs.close()
     db.close()
