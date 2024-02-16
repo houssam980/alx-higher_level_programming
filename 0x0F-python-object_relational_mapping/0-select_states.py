@@ -1,23 +1,20 @@
 #!/usr/bin/python3
-""" script to list qll states """
-import MySQLdb
+""" Script that lists all states from the database"""
 from sys import argv
+import MySQLdb
 
 
 if __name__ == '__main__':
-    
-    """making database connection"""
+
+    # make a connection to the database
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
-
- 
-
-    curs = db.cursor()
-    curs.execute("SELECT * FROM states")
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states")
 
     rows = cur.fetchall()
-    for iter in rw:
-        print(iter)
-        """close excution and db connection"""
-    curs.close()
+    for i in rows:
+        print(i)
+        """closing connection"""
+    cur.close()
     db.close()
