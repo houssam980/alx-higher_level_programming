@@ -6,15 +6,15 @@ import MySQLdb
 
 if __name__ == '__main__':
 
-    # make a connection to the database
+    """making database connection"""
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    curls = db.cursor()
+    curls.execute("SELECT * FROM states")
 
-    rows = cur.fetchall()
-    for i in rows:
-        print(i)
+    rws = curls.fetchall()
+    for lp in rws:
+        print(lp)
         """closing connection"""
-    cur.close()
+    curls.close()
     db.close()
