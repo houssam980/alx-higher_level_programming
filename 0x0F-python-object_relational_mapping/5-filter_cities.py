@@ -15,10 +15,11 @@ if __name__ == '__main__':
                 WHERE states.name = %s", [argv[4]])
 
     rws = curls.fetchall()
-    joi = [ ]
+    joi = []
     for lp in rws:
         joi.append(lp[1])
         print(", ".join(joi))
+        
         """closing connection"""
     curls.close()
     db.close()
