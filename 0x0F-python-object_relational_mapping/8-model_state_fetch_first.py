@@ -13,7 +13,7 @@ if __name__ == "__main__":
     eng = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    sess = sessionmaker(bind=engine)
+    sess = sessionmaker(bind=eng)
     sessio = sess()
 
     result = sessio.query(State).first()
