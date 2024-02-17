@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
